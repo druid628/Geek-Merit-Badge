@@ -4,12 +4,11 @@ class Badge {
 
 	String title
 	String description
-	String image
+	byte[] image
 
 	static constraints = {
 		title(blank: false)
 		description(blank: false)
-		image(blank: false)
 	}
 
 	@Override
