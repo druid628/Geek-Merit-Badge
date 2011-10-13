@@ -1,7 +1,7 @@
 package com.druid628.gmb
 
-class BadgeController {
+class PersonController {
 
 	//    def index = { }
-	def scaffold = Badge 
+	def scaffold = Person
 }

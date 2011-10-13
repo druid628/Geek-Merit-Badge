@@ -2,13 +2,19 @@ package com.druid628.gmb
 
 class Badge {
 
-    String title
-    String description
-    String image
+	String title
+	String description
+	String image
 
-    static constraints = {
-        title(blank: false)
-        description(blank: false)
-        image(blank: false)
-    }
+	static constraints = {
+		title(blank: false)
+		description(blank: false)
+		image(blank: false)
+	}
+
+	@Override
+	public String toString()
+	{
+		return title
+	}
 }
