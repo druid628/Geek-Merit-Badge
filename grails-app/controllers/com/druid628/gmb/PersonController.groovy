@@ -5,7 +5,10 @@ class PersonController {
 	//    def index = { }
 	def view =  {
 		def usr = new Person(username: params.username)
-		def usersBadges = new Person2Badge(user: usr.id)
+		def users2Badges = new Person2Badge(user: usr.id)
+		def badges
+		users2Badges.each( badges[] = Badge.(it.badges))
+		
 	}
 
 	def scaffold = Person
