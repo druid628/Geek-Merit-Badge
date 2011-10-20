@@ -8,6 +8,8 @@ class Person {
 	String lastName
 	String username
 	String password
+	String email
+	boolean godMode
 	boolean enabled
 	boolean accountExpired
 	boolean accountLocked
@@ -16,6 +18,7 @@ class Person {
 	static constraints = {
 		firstName blank: false
 		lastName blank: false
+		email blank: false, unique: true, email: true
 		username blank: false, unique: true
 		password blank: false
 	}
