@@ -9,7 +9,7 @@ class Person {
 	String username
 	String password
 	String email
-	boolean godMode
+	boolean godMode = false; //admin
 	boolean enabled
 	boolean accountExpired
 	boolean accountLocked

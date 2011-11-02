@@ -1,9 +1,11 @@
-import com.druid628.gmb.Person
+//import com.druid628.gmb.Person
+//import com.druid628.gmb.PersonAuthority
 
 class BootStrap {
 
 	def init = { servletContext ->
-		if (Environment.current == Environment.PRODUCTION ||
+	}
+/*		if (Environment.current == Environment.PRODUCTION ||
 			Environment.current == Environment.TEST) {
 			// productionData()
 		}
@@ -13,14 +15,16 @@ class BootStrap {
 			// productionData()
 			developmentData()
 		}
-	}
+*/
 	def destroy = {
 	}
 
-	def developmentData = {
+/*	
+   def developmentData = {
 		String password = springSecurityService.encodePassword('password')
 
-		Person druid = new Person(
+
+		PersonAuthority druid = new PersonAuthority(
 			username: "druid",
 			firstName: "Micah",
 			lastName: "Breedlove",
@@ -28,6 +32,12 @@ class BootStrap {
 			password: password,
 			enabled: true
 		).save()
-		
+
+		[user1: 'User No1', user2: 'User No2'].each { userName, realName ->
+            		def user = new Person(username: userName, realName: realName, password: password, enabled: true).save()
+            		PersonAuthority.create user, userRole, true
+        	}
 	}
+    */
+		
 }
