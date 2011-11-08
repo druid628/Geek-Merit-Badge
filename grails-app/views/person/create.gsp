@@ -48,6 +48,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="email"><g:message code="person.email.label" default="Email" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'email', 'errors')}">
+                                    <g:textField name="email" value="${personInstance?.email}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="username"><g:message code="person.username.label" default="Username" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'username', 'errors')}">
@@ -88,6 +97,15 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'enabled', 'errors')}">
                                     <g:checkBox name="enabled" value="${personInstance?.enabled}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="godMode"><g:message code="person.godMode.label" default="God Mode" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'godMode', 'errors')}">
+                                    <g:checkBox name="godMode" value="${personInstance?.godMode}" />
                                 </td>
                             </tr>
                         
