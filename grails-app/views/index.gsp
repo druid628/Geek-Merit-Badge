@@ -49,8 +49,9 @@
             margin-right:20px;
         }
         </style>
+       <dojo:header theme="soria"/>
     </head>
-    <body>
+    <body class="soria">
         <div id="nav">
             <div class="homePagePanel">
                 <div class="panelTop"></div>
