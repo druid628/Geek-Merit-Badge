@@ -46,6 +46,8 @@
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="badge.image.label" default="Image" /></td>
                             
+                            <td valign="top" class="value"><img src="${createLink(controller:'badge', action:'image', id: badgeInstance.id)}"/></td>
+                            
                         </tr>
                     
                     </tbody>

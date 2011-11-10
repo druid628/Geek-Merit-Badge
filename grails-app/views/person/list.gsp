@@ -6,6 +6,7 @@
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'person.label', default: 'Person')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <link rel="stylesheet" href="${resource(dir:'css',file:'main-back.css')}" />
     </head>
     <body>
         <div class="nav">
