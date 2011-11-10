@@ -3,14 +3,21 @@ html * {
     /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
 }
 
+#header {
+	margin: 0;
+	padding: 0;
+}
 h1.appTitle {
+	margin: 0;	
+	padding: 0;
+	padding-top: 3px;
+	padding-left: 8px;
 	background-color: #000;
 	color: #fff;
 	width:35%;
 	opacity: 0.8;
-	margin: 0;	
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
+    	-moz-border-radius-topleft: 5px;
+    	-moz-border-radius-topright: 5px;
 	-moz-border-radius-bottomleft: 0px;
 	-moz-border-radius-bottomright: 0px;
 	-webkit-border-top-left-radius: 5px;
@@ -22,13 +29,16 @@ h1.appTitle {
 .tagLine {
 	margin: 0;
 	padding: 0;
+	padding-bottom: 6px;
+	padding-left: 8px;
 	font-size: 1em;
 	background-color: #000;
 	color: #fff;
 	width:35%;
 	opacity: 0.5;
+
 	-moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px;
+    	-moz-border-radius-topright: 0px;
 	-moz-border-radius-bottomleft: 5px;
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-top-left-radius: 0px;
@@ -42,7 +52,6 @@ h1.appTitle {
 	position: relative;
 	left: 50%;
 	padding: 0; 
-	padding-left: .5em;
 	-webkit-margin-before: 0.67em;
 	-webkit-margin-after: 0.67em;
 	-webkit-margin-start: 0px;
@@ -61,6 +70,34 @@ body {
     background: #fff;
     color: #333;
     font: 11px verdana, arial, helvetica, sans-serif;
+}
+
+.spinner {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+}
+
+/*html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+body {
+	margin:0 auto;
+	background: #F4F0EE;
+}
+div#header, div#footer {
+	margin:0;
+	width:100%;
+	background-color: #E8DFD9;
+}*/
+div#bootyWrapper {
+	margin: 0 auto;
+	width: 65%;
 }
 
 /* ACTION BUTTONS */

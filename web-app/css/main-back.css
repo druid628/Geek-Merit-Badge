@@ -12,11 +12,7 @@ h1.appTitle {
 
 /* GENERAL */
 
-.spinner {
-    padding: 5px;
-    position: absolute;
-    right: 0;
-}
+
 
 body {
     background: #fff;

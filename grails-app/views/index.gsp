@@ -93,6 +93,14 @@
                     </g:each>
                 </ul>
             </div>
+	    <div id="userList" class="dialog">
+                <h2>Available Users:</h2>
+                <ul>
+                    <g:each var="u" in="${com.druid628.gmb.Person.getAll().sort { it.id } }">
+			    <li class="user"><g:link action="show" id="${u.id}" controller="person">${u.username}</g:link></li>
+                    </g:each>
+                </ul>
+            </div>
         </div>
     </body>
 </html>
