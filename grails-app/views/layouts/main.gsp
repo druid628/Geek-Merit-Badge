@@ -18,8 +18,25 @@
     <sec:ifLoggedIn>
 	    <strong>Welcome <sec:loggedInUserInfo field="username"/></strong><br/><br/>
     </sec:ifLoggedIn>
+
+
     <div id="bootyWrapper">
-        <g:layoutBody />
+	<div id="navigate">
+		<ul>
+			<li class="top-left">HOME
+			<li>AWARD
+			<li>PROFILE
+			<li class="top-right">Settings
+		</ul>
+	</div>
+	<div id="contentContainer">
+			<br />
+        		<g:layoutBody />
+			<br />
+	</div>
+	<div id="floor" class="bottom-left bottom-right">
+		<span id="footerTxt">GeekMeritBadge (c)2011 druid628</span>
+	</div>
     </div>
     </body>
 </html>
