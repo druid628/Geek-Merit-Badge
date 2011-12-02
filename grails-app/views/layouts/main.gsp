@@ -19,7 +19,7 @@
 	    <strong>Welcome <sec:loggedInUserInfo field="username"/></strong><br/><br/>
     </sec:ifLoggedIn>
 
-
+	<br/>
     <div id="bootyWrapper">
 	<div id="navigate">
 		<ul>

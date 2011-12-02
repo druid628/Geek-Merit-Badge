@@ -45,7 +45,8 @@
             font-size:1.2em;
         }
         #pageBody {
-            margin-left:280px;
+          /*  margin-left:280px; */
+            margin-left: 20px;
             margin-right:20px;
         }
         </style>
