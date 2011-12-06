@@ -109,6 +109,9 @@
 				<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
 				<g:link controller=”register” action=”forgotPassword”>Forgot your password?</g:link>
 			</p>
+      <p id="register">
+				<g:link controller=”register” action=”index”>Register for an account</g:link>
+      </p>
 
 			<p>
 				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
