@@ -1,4 +1,6 @@
-// locations to search for config files that get merged into the main config
+import grails.plugins.springsecurity.SecurityConfigType
+
+// // locations to search for config files that get merged into the main config
 // config files can either be Java properties files or ConfigSlurper scripts
 
 // grails.config.locations = [ "classpath:${appName}-config.properties",
@@ -95,9 +97,14 @@ grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.druid628.
 grails.plugins.springsecurity.authority.className = 'com.druid628.gmb.Authority'
 
 
-/*grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity
+// grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity
+grails.plugins.springsecurity.securityConfigType = SecurityConfigType.InterceptUrlMap
+
 grails.plugins.springsecurity.interceptUrlMap = [
 		// '/settings/**': 	['IS_AUTHENTICATED_FULLY'],
-		'/login/**': 	['IS_AUTHENTICATED_ANONYMOUSLY'],
-		'/logout/**': 	['IS_AUTHENTICATED_ANONYMOUSLY']
-]*/
+		'/badge/create': 	['IS_AUTHENTICATED_REMEMBERED'],
+		'/person2Badge/create': ['IS_AUTHENTICATED_REMEMBERED'],
+		'/login/**': 		['IS_AUTHENTICATED_ANONYMOUSLY'],
+		'/logout/**': 		['IS_AUTHENTICATED_ANONYMOUSLY'],
+		'/**': 			['IS_AUTHENTICATED_ANONYMOUSLY']
+]
