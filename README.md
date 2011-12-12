@@ -1,4 +1,4 @@
-** geekMeritBadge **  ![Project status](http://stillmaintained.com/druid628/Geek-Merit-Badge.png)  
+**geekMeritBadge**  ![Project status](http://stillmaintained.com/druid628/Geek-Merit-Badge.png)  
 
 As a friendly competition between colleagues exploring languages and frameworks outside of our usual comfort zone.  I chose Groovy/Grails.  
 
