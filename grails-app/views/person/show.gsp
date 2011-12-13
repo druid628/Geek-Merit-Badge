@@ -86,13 +86,6 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.godMode.label" default="God Mode" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${personInstance?.godMode}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.passwordExpired.label" default="Password Expired" /></td>
                             
                             <td valign="top" class="value"><g:formatBoolean boolean="${personInstance?.passwordExpired}" /></td>

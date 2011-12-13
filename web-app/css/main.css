@@ -1,6 +1,25 @@
 html * {
     margin: 0;
+    line-height: 16pt;
     /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+#navigate a
+{
+	text-decoration: none;
+	/*font-variant: small-caps;
+	font-size: 1.25em;*/
+	font-weight: bold;
+	color: blanchedalmond;
+}
+
+#navigate a:hover
+{
+	text-decoration: underline;
+}
+
+#navigate a:visited {
+	color: blanchedalmond;
 }
 
 #header {

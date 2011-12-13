@@ -15,17 +15,24 @@
         <div id="spinner" class="spinner" style="display:none;">
             <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
         </div>
-    <sec:ifLoggedIn>
-	    <strong>Welcome <sec:loggedInUserInfo field="username"/></strong><br/><br/>
-    </sec:ifLoggedIn>
 
-	<br/>
     <div id="bootyWrapper">
+    <sec:ifLoggedIn>
+	    <strong>Welcome <sec:loggedInUserInfo field="username"/></strong>
+    </sec:ifLoggedIn>
 	<div id="navigate">
 		<ul>
 			<li class="top-left">HOME
 			<li>AWARD
-			<li>PROFILE
+			<li>
+			   <sec:ifLoggedIn>
+			 	<g:link action="show" id="${sec.loggedInUserInfo(field: "id")}" controller="person">${sec.loggedInUserInfo(field: "username")}</g:link>
+			   </sec:ifLoggedIn>
+			   <sec:ifNotLoggedIn>
+			 	<g:link action="index" controller="login">Profile</g:link>
+		   	   </sec:ifNotLoggedIn>
+			</li>
+
 			<li class="top-right">Settings
 		</ul>
 	</div>
@@ -35,7 +42,7 @@
 			<br />
 	</div>
 	<div id="floor" class="bottom-left bottom-right">
-		<span id="footerTxt">GeekMeritBadge (c)2011 druid628</span>
+		<span id="footerTxt">geekMeritBadge &copy;2011 druid628</span>
 	</div>
     </div>
     </body>

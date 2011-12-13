@@ -102,15 +102,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="godMode"><g:message code="person.godMode.label" default="God Mode" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'godMode', 'errors')}">
-                                    <g:checkBox name="godMode" value="${personInstance?.godMode}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="passwordExpired"><g:message code="person.passwordExpired.label" default="Password Expired" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'passwordExpired', 'errors')}">
