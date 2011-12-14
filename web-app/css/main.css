@@ -1,31 +1,14 @@
 html * {
-    margin: 0;
-    line-height: 16pt;
-    /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
-}
-
-#navigate a
-{
-	text-decoration: none;
-	/*font-variant: small-caps;
-	font-size: 1.25em;*/
-	font-weight: bold;
-	color: blanchedalmond;
-}
-
-#navigate a:hover
-{
-	text-decoration: underline;
-}
-
-#navigate a:visited {
-	color: blanchedalmond;
+	margin: 0;
+	line-height: 16pt;
+	/*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
 }
 
 #header {
 	margin: 0;
 	padding: 0;
 }
+
 h1.appTitle {
 	margin: 0;
 	padding: 0;
@@ -35,8 +18,8 @@ h1.appTitle {
 	color: #fff;
 	width:35%;
 	opacity: 0.8;
-    	-moz-border-radius-topleft: 5px;
-    	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
 	-moz-border-radius-bottomleft: 0px;
 	-moz-border-radius-bottomright: 0px;
 	-webkit-border-top-left-radius: 5px;
@@ -55,9 +38,8 @@ h1.appTitle {
 	color: #fff;
 	width:35%;
 	opacity: 0.5;
-
 	-moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px;
+	-moz-border-radius-topright: 0px;
 	-moz-border-radius-bottomleft: 5px;
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-top-left-radius: 0px;
@@ -65,8 +47,6 @@ h1.appTitle {
 	-webkit-border-bottom-left-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
 }
-
-
 
 .rightHanded {
 	position: relative;
@@ -79,81 +59,70 @@ h1.appTitle {
 }
 
 .rounded-corners {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
 }
 
 /* GENERAL */
 body {
-    background: #fff;
-    color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
+	width: 1200px;
+	background: #fff;
+	color: #333;
+	font: 11px verdana, arial, helvetica, sans-serif;
 }
 
 .spinner {
-    padding: 5px;
-    position: absolute;
-    right: 0;
+	padding: 5px;
+	position: absolute;
+	right: 0;
 }
 
-/*html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img {
-	margin:0;
-	padding:0;
-	border:0;
-	font-size:100%;
-	font:inherit;
-	vertical-align:baseline;
-}
-body {
-	margin:0 auto;
-	background: #F4F0EE;
-}
-div#header, div#footer {
-	margin:0;
-	width:100%;
-	background-color: #E8DFD9;
-}*/
 div#bootyWrapper {
 	margin: 0 auto;
-	width: 55%;
+	width: 790px;
+}
+
+#welcomeUser {
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 /* ACTION BUTTONS */
 
 .buttons {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    color: #666;
-    font-size: 10px;
-    margin-top: 5px;
-    overflow: hidden;
-    padding: 0;
+	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+	border: 1px solid #ccc;
+	color: #666;
+	font-size: 10px;
+	margin-top: 5px;
+	overflow: hidden;
+	padding: 0;
 }
 
 .buttons input {
-    background: #fff;
-    border: 0;
-    color: #333;
-    cursor: pointer;
-    font-size: 10px;
-    font-weight: bold;
-    margin-left: 3px;
-    overflow: visible;
-    padding: 2px 6px;
+	background: #fff;
+	border: 0;
+	color: #333;
+	cursor: pointer;
+	font-size: 10px;
+	font-weight: bold;
+	margin-left: 3px;
+	overflow: visible;
+	padding: 2px 6px;
 }
 .buttons input.delete {
-    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
-    padding-left: 28px;
+	background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
+	padding-left: 28px;
 }
 .buttons input.edit {
-    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
-    padding-left: 28px;
+	background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
+	padding-left: 28px;
 }
 .buttons input.save {
-    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
-    padding-left: 28px;
+	background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
+	padding-left: 28px;
 }
 
 div#navigate
@@ -163,18 +132,36 @@ div#navigate
 	color: #FFF;
 }
 
-#navigate .top-right
-{
-	-moz-border-radius-topright: 12px;
-	-webkit-border-top-right-radius: 12px;
-}
+	#navigate .top-right
+	{
+		-moz-border-radius-topright: 12px;
+		-webkit-border-top-right-radius: 12px;
+	}
 
-#navigate .top-left
-{
-	-moz-border-radius-topleft: 12px;
-	-webkit-border-top-left-radius: 12px;
+	#navigate .top-left
+	{
+		-moz-border-radius-topleft: 12px;
+		-webkit-border-top-left-radius: 12px;
+	}
 
-}
+	#navigate a
+	{
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: blanchedalmond;
+	}
+
+	    	#navigate a:hover
+	    	{
+	    		text-decoration: underline;
+	    	}
+
+	    	#navigate a:visited {
+	    		color: blanchedalmond;
+	    	}
+
+
 #floor
 {
 	float: left;

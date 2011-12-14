@@ -4,7 +4,8 @@ class Badge {
 
 	String title
 	String description
-	byte[] image
+	String image
+	//byte[] image
 
 	static constraints = {
 		title(blank: false)

@@ -11,5 +11,9 @@ class PersonController {
 		
 	}*/
 
+	def settings = {
+
+	}
+
 	def scaffold = Person
 }

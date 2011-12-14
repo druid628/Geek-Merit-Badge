@@ -97,6 +97,15 @@ grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.druid628.
 grails.plugins.springsecurity.authority.className = 'com.druid628.gmb.Authority'
 
 
+grails.plugins.springsecurity.InterceptUrlMap = [
+		'/person/settings': 	['IS_AUTHENTICATED_FULLY'],
+		'/badge/create': 	['IS_AUTHENTICATED_REMEMBERED'],
+		'/person2Badge/create': ['IS_AUTHENTICATED_REMEMBERED'],
+		'/login/**': 		['IS_AUTHENTICATED_ANONYMOUSLY'],
+		'/logout/**': 		['IS_AUTHENTICATED_ANONYMOUSLY'],
+		// '/**': 			['IS_AUTHENTICATED_ANONYMOUSLY']
+
+]
 // grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity
 /*grails.plugins.springsecurity.securityConfigType = SecurityConfigType.InterceptUrlMap
 grails.plugins.springsecurity.interceptUrlMap = [

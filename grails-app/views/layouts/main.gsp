@@ -17,13 +17,15 @@
         </div>
 
     <div id="bootyWrapper">
-    <sec:ifLoggedIn>
-	    <strong>Welcome <sec:loggedInUserInfo field="username"/></strong>
-    </sec:ifLoggedIn>
+	<div id="welcomeUser">
+    	   <sec:ifLoggedIn>
+	   	<strong>Welcome <sec:loggedInUserInfo field="username"/></strong>
+    	   </sec:ifLoggedIn>
+	</div>
 	<div id="navigate">
 		<ul>
-			<li class="top-left">HOME
-			<li>AWARD
+			<li class="top-left"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a>
+			<li><g:link action="create" controller="person2Badge">AWARD</g:link>
 			<li>
 			   <sec:ifLoggedIn>
 			 	<g:link action="show" id="${sec.loggedInUserInfo(field: "id")}" controller="person">${sec.loggedInUserInfo(field: "username")}</g:link>

@@ -7,11 +7,11 @@ class BadgeController {
 	def index = {
 		redirect(action: "list", params: params)
 	}
-	def image= {
+	/*def image= {
 		def badge = Badge.get( params.id )
 		byte[] image = badge.image
 		response.outputStream << image
-	}
+	}*/
 	def list = {
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		[badgeInstanceList: Badge.list(params), badgeInstanceTotal: Badge.count()]
@@ -24,8 +24,21 @@ class BadgeController {
 	}
 
 	def save = {
+
+		def f = request.getFile('image')
+		params.image = f.name;
+		System.out.println(params.title)
+		System.out.println(params.description)
 		def badgeInstance = new Badge(params)
-		if (badgeInstance.save(flush: true)) {
+		if (badgeInstance.save(flush: true))
+		{
+		    		if(!f.empty) {
+		      			f.transferTo( new File('/Users/druid/gmbFiles/${f.name}') )
+		    		}
+		    		else {
+		       			flash.message = 'file cannot be empty'
+		    		}
+
 			flash.message = "${message(code: 'default.created.message', args: [message(code: 'badge.label', default: 'Badge'), badgeInstance.id])}"
 			redirect(action: "show", id: badgeInstance.id)
 		}
