@@ -4,30 +4,47 @@ import com.druid628.gmb.Authority
 import grails.util.Environment
 
 class BootStrap {
-    def springSecurityService
+	def springSecurityService
+
+	def adminRole = new Authority(authority: 'ROLE_ADMIN', description: 'Admin role').save()
+	def userRole = new Authority(authority: 'ROLE_USER', description: 'User role').save()
 
 	def init = { servletContext ->
-		/*if (Environment.current == Environment.PRODUCTION ||
-			Environment.current == Environment.TEST) {
-			// productionData()
-		}*/
+		if (Environment.current == Environment.PRODUCTION ||
+		Environment.current == Environment.TEST) {
+			productionData()
+		}
 	    
 
 		if (Environment.current == Environment.DEVELOPMENT) 
 		{
-			// productionData()
 			developmentData()
+			productionData()
 		}
 	}
 
 	def destroy = {
 	}
 
-   def developmentData = {
-		//String password = springSecurityService.encodePassword('password')
+	def developmentData = {
+			[user1: 'User No1', user2: 'User No2', user3: "User No3"].each { userName, realName ->
+		   		def user = new Person(
+					username: userName,
+					realName: realName,
+					password: "password",
+					accountExpired: false,
+					accountLocked: false,
+					passwordExpired: false,
+					enabled: true
+				).save()
 
-   def adminRole = new Authority(authority: 'ROLE_ADMIN', description: 'Admin role').save()
-   def userRole = new Authority(authority: 'ROLE_USER', description: 'User role').save()
+		     		PersonAuthority.create user, userRole, true
+			}
+
+	}
+
+	def productionData = {
+
 		// PersonAuthority druid = new PersonAuthority(
 		Person druid = new Person(
 			username: "druid",
@@ -42,15 +59,10 @@ class BootStrap {
 
 		).save()
 
-  if (!druid.authorities.contains(adminRole)) {
-            PersonAuthority.create druid, adminRole
-  }
+		if (!druid.authorities.contains(adminRole)) {
+			PersonAuthority.create druid, adminRole
+		}
 
-	/*	[user1: 'User No1', user2: 'User No2'].each { userName, realName ->
-         *  		def user = new Person(username: userName, realName: realName, password: password, enabled: true).save()
-         *    		PersonAuthority.create user, userRole, true
-         *	}
-	 */
 	}
 		
 }

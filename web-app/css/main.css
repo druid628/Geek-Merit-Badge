@@ -167,6 +167,7 @@ div#navigate
 	float: left;
 	margin: 0 0 0 40px;
 	width: 76%;
+	/*width: 590px;*/
 	height: 3em;
 	background-color: #000;
 	color: #fff;
@@ -196,8 +197,9 @@ div#navigate
 
 #contentContainer {
 	float: left;
+	padding: 0 5px 0 5px;
 	margin: 0 0 0 40px;
-	width: 76%;
+	width: 590px;
 	background-color: #CCC;
 }
 
