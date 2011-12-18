@@ -2,7 +2,7 @@ class UrlMappings {
 
 	static mappings = {
 		
-		"/$username" {
+		name userHome: "/$username" {
 			controller = "person"
 			action = "show"
 		}

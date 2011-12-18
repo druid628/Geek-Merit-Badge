@@ -27,10 +27,11 @@ class BootStrap {
 	}
 
 	def developmentData = {
-			[user1: 'User No1', user2: 'User No2', user3: "User No3"].each { userName, realName ->
+			[user1: 'No1', user2: 'No2', user3: "No3"].each { userName, realName ->
 		   		def user = new Person(
 					username: userName,
-					realName: realName,
+					firstName: 'User',
+					lastName: realName,
 					password: "password",
 					accountExpired: false,
 					accountLocked: false,

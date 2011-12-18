@@ -8,11 +8,11 @@ class PersonController {
 
     private lookupPerson()
     {
-	return Person.get(springSecurityService.principal.id);
+	return {com.druid628.gmb.Person.get(org.springframework.security.core.context.SecurityContextHolder.context.authentication.principal.id)}
     }
 
     def settings = {
-        
+        def you = lookupPerson()
     }
 
     def index = {
@@ -42,7 +42,8 @@ class PersonController {
     }
 
     def show = {
-        def personInstance = Person.get(params.id)
+	def personInstance = Person.findByUsername(params.username)
+	
         if (!personInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'person.label', default: 'Person'), params.id])}"
             redirect(action: "list")

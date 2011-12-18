@@ -28,7 +28,7 @@
 			<li><g:link action="create" controller="person2Badge">AWARD</g:link>
 			<li>
 			   <sec:ifLoggedIn>
-			 	<g:link action="show" id="${sec.loggedInUserInfo(field: "id")}" controller="person">${sec.loggedInUserInfo(field: "username")}</g:link>
+			 	<g:link mapping="userHome" controller="person" action="show" params="[username: sec.loggedInUserInfo(field: 'username')]" >${sec.loggedInUserInfo(field: "username")} </g:link>
 			   </sec:ifLoggedIn>
 			   <sec:ifNotLoggedIn>
 			 	<g:link action="index" controller="login">Login</g:link>
